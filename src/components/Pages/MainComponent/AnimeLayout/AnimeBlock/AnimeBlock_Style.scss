@@ -1,0 +1,43 @@
+@import "../../../../../STYLES/color_Styles/color_Styles.scss";
+
+.anime_block_wrapper {
+  margin-top: 50px;
+  flex: 1 1 800px;
+  padding-inline: 0 !important;
+
+  .anime_items_block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .header_block {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    color: $primary_text_color;
+
+    .view__all {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 20px;
+
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: $secondary_color;
+      letter-spacing: 2px;
+      cursor: pointer;
+
+      &:hover {
+        color: #ffffff;
+      }
+    }
+  }
+}
+@media screen and (max-width: 720px) {
+  .anime_items_block {
+    flex-direction: column;
+  }
+}

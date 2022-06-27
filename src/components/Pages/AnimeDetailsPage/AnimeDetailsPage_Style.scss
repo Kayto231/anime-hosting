@@ -1,0 +1,32 @@
+@import "../../../STYLES/color_Styles/color_Styles.scss";
+
+.anime_details__container {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  margin-inline: auto;
+  margin-top: 50px;
+  color: $primary_text_color;
+
+  .footer__block {
+    display: flex;
+    .comments {
+      flex: 1 1 70%;
+      margin-right: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+    .aside__anime__details__block {
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .anime_details__container {
+    .footer__block {
+      flex-direction: column;
+      .aside__anime__details__block {
+      }
+    }
+  }
+}

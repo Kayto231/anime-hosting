@@ -1,25 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import "./index.scss";
+import { BrowserRouter } from "react-router-dom";
+import AppRouter from "./components/AppRouter/AppRouter";
+import NavBar from "./components/NavBar/NavBar";
+import { useTypedSelector } from "./hooks/useTypedSelector";
+import { FetchAnimeListFunction } from "./redux/actions/userReducerAction/userReducerAction";
+import { useAction } from "./hooks/useActions";
+import Footer from "./components/Footer/Footer";
 
-function App() {
+function App<FC>(): React.ReactElement {
+  const { animeList, error, isLoading } = useTypedSelector(
+    (state) => state.anime
+  );
+  const { FetchAnimeListFunction } = useAction();
+
+  useEffect(() => {
+    FetchAnimeListFunction();
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="wrapper">
+        <NavBar />
+        <AppRouter />
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 

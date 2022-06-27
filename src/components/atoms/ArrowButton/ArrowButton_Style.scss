@@ -1,0 +1,14 @@
+@import "../../../STYLES/color_Styles/color_Styles.scss";
+
+.arrow__btn {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 54px;
+  height: 54px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 8px solid $primary_color;
+  transform: rotateZ(135deg);
+  cursor: pointer;
+}

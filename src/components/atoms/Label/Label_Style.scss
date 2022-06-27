@@ -1,0 +1,20 @@
+@import "/src/STYLES/color_Styles/color_Styles.scss";
+
+.label {
+  text-transform: uppercase;
+  line-height: 21px;
+  position: relative;
+  margin-block: 20px;
+
+  &::before {
+    display: inline-block;
+    position: absolute;
+    margin-right: 10px;
+    left: -10px;
+    top: -6px;
+    height: 32px;
+    width: 4px;
+    background: $secondary_color;
+    content: "";
+  }
+}

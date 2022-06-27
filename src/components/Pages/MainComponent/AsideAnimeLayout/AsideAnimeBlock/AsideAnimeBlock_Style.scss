@@ -1,0 +1,73 @@
+@import "../../../../../STYLES/color_Styles/color_Styles.scss";
+
+.aside_anime_block_wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+  max-width: 350px;
+  color: $primary_text_color;
+  margin-top: 50px;
+  margin-inline: auto;
+
+  .header_block {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+
+    .description__block {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: fit-content;
+
+      .view__all {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $secondary_color;
+        letter-spacing: 2px;
+        cursor: pointer;
+
+        &:hover {
+          color: #ffffff;
+        }
+      }
+    }
+    .sort__block {
+      width: 100%;
+      list-style: none;
+      display: flex;
+      justify-content: flex-end;
+      .sort__item {
+        cursor: pointer;
+        padding-inline: 5px;
+        font-size: 13px;
+        color: $secondary_text_color;
+      }
+      .active {
+        color: $primary_text_color;
+      }
+    }
+  }
+
+  .aside_anime_block {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .aside_anime_block_wrapper {
+  }
+}

@@ -1,0 +1,55 @@
+@import "/src/STYLES/color_Styles/color_Styles.scss";
+
+.comments__item {
+  width: 100%;
+  display: flex;
+  position: relative;
+  margin-block: 20px;
+
+  .avatar__image {
+    border-radius: 50%;
+    height: 50px;
+    padding-inline: 10px;
+  }
+  .img-icon {
+    &::after {
+      position: absolute;
+      display: flex;
+      content: " ";
+      width: 10px;
+      height: 10px;
+      left: 65px;
+      top: 10px;
+      transform: rotate(45deg);
+      background-color: $message_background;
+    }
+  }
+  .message_wrapper {
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    padding-inline: 20px;
+    min-height: 90px;
+    width: 80%;
+    background: $message_background;
+
+    .header__block {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      font-weight: 700;
+      line-height: 2.4;
+      .nickname {
+        font-size: 16px;
+      }
+      .time {
+        opacity: 0.5;
+      }
+    }
+    .message {
+      opacity: 0.7;
+      max-height: fit-content;
+      padding: 10px;
+    }
+  }
+}

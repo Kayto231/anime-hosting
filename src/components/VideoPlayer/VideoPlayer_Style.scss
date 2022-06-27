@@ -1,0 +1,104 @@
+.video_container_wrapper {
+  flex: 1 1 auto;
+
+  .video_container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 1000px;
+    margin-inline: auto;
+    margin-top: 50px;
+
+    &:hover,
+    &.paused,
+    &:focus-within {
+      .video_controls_container {
+        opacity: 1;
+      }
+    }
+
+    &.paused {
+      .video_controls_container {
+        .controls {
+          .play_pause_btn {
+            .play_icon {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    &:not(.paused) {
+      .video_controls_container {
+        .controls {
+          .play_pause_btn {
+            .pause_icon {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    .video_controls_container {
+      cursor: pointer;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 100;
+      opacity: 0;
+      transition: opacity 150ms ease-in-out;
+
+      .timeline_container {
+      }
+      .controls {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+
+        .play_pause_btn {
+          background: none;
+          border: none;
+          outline: none;
+          height: 30px;
+          width: 30px;
+          padding: 0;
+
+          font-size: 1.1rem;
+          color: white;
+          cursor: pointer;
+
+          opacity: 0.85;
+          transition: opacity 150ms ease-in-out;
+        }
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent);
+        aspect-ratio: 6 / 1;
+        z-index: -1;
+        pointer-events: none;
+      }
+
+      &:hover {
+        .controls {
+          .play_pause_btn {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .video {
+      width: 100%;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@import "/src/STYLES/color_Styles/color_Styles.scss";
+
+.comments__block__wrappper {
+  width: 100%;
+  margin-top: 50px;
+
+  .comments__overflow {
+    max-height: 700px;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}

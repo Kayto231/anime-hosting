@@ -1,0 +1,53 @@
+@import "../../STYLES/color_Styles/color_Styles.scss";
+
+.footer__wrapper {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: $primary_text_color;
+  flex: 0 0 auto;
+  height: 150px;
+  background: $primary_color;
+
+  .logo__block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 33%;
+    font-size: 24px;
+    font-weight: 700;
+    .text {
+      color: $primary_text_color;
+    }
+    .text_colored {
+      color: $secondary_color;
+    }
+  }
+
+  .navBtns__block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 33%;
+    list-style: none;
+    font-weight: 700;
+
+    .btn__item {
+      cursor: pointer;
+      padding-inline: 10px;
+    }
+    .active {
+      background: $secondary_color;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .footer__wrapper {
+    .navBtns__block {
+      flex-direction: column;
+    }
+  }
+}

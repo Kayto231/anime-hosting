@@ -1,0 +1,34 @@
+@import "/src/STYLES/color_Styles/color_Styles.scss";
+
+.btn {
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  background: $secondary_color;
+  color: $primary_text_color;
+  outline: none;
+  border: 0;
+  position: relative;
+  padding: 14px 20px;
+  border-radius: 4px;
+  margin: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  max-width: 200px;
+
+  .btn__image {
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    left: 20px;
+  }
+  .btn__text {
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    padding-inline: 20px;
+  }
+}
